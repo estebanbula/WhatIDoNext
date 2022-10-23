@@ -1,0 +1,9 @@
+package com.whatidonext.entity;
+
+public class TaskEntity {
+	
+	private Short taskId;
+	private String taskName;
+	
+
+}

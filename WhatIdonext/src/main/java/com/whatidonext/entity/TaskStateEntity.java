@@ -1,0 +1,55 @@
+package com.whatidonext.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class TaskStateEntity {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "TAS")
+	private Short stateId;
+	
+	private String stateDescription;
+	
+	private String active;
+	
+	private String creationDate;
+
+	public String getActive() {
+		return active;
+	}
+
+	public String getCreationDate() {
+		return creationDate;
+	}
+
+	public String getStateDescription() {
+		return stateDescription;
+	}
+
+	public Short getTaskId() {
+		return stateId;
+	}
+
+	public void setActive(String active) {
+		this.active = active;
+	}
+
+	public void setCreationDate(String creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public void setStateDescription(String stateDescription) {
+		this.stateDescription = stateDescription;
+	}
+
+	public void setTaskId(Short stateId) {
+		this.stateId = stateId;
+	}
+
+}

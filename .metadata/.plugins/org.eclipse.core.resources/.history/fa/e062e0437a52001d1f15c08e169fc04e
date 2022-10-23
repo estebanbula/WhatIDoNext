@@ -1,0 +1,5 @@
+package com.whatidonext.entity;
+
+public class CollaboratorsEntity {
+
+}

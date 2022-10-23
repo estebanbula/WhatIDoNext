@@ -1,0 +1,96 @@
+package com.whatidonext.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class TasksEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Short taskId;
+	private String taskName;
+	private String description;
+	private Short collaboratorId;
+	private Short priorityId;
+	private Short stateId;
+	private String deleted;
+
+	public Short getTaskId() {
+		return taskId;
+	}
+
+	public void setTaskId(Short taskId) {
+		this.taskId = taskId;
+	}
+
+	public String getTaskName() {
+		return taskName;
+	}
+
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Short getCollaboratorId() {
+		return collaboratorId;
+	}
+
+	public void setCollaboratorId(Short collaboratorId) {
+		this.collaboratorId = collaboratorId;
+	}
+
+	public Short getPriorityId() {
+		return priorityId;
+	}
+
+	public void setPriorityId(Short priorityId) {
+		this.priorityId = priorityId;
+	}
+
+	public Short getStateId() {
+		return stateId;
+	}
+
+	public void setStateId(Short stateId) {
+		this.stateId = stateId;
+	}
+
+	public String getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(String deleted) {
+		this.deleted = deleted;
+	}
+
+	public String getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(String creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public String getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(String updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	private String creationDate;
+	private String updateDate;
+
+}
