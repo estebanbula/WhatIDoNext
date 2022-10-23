@@ -1,1 +1,21 @@
 1666491167352	Rename type 'TaskEntity'
+1666494222409	Rename type 'TasksServices'
+1666494646739	Rename package 'com.whatidonext.dao.priorities'
+1666494805364	Delete element
+1666494901811	Rename type 'PrioritiesRepostitory'
+1666495469047	Rename package 'com.whatidonext.entity'
+1666495501796	Rename package 'com.whatidonext.repository.priorities'
+1666495520769	Rename package 'repository.priorities'
+1666495547910	Copy package
+1666495551703	Delete element
+1666495627377	Move compilation unit
+1666495634786	Move compilation unit
+1666495661248	Delete element
+1666495748079	Move compilation units
+1666495759040	Delete element
+1666495820542	Move compilation units
+1666495840704	Delete element
+1666495851762	Delete element
+1666495995276	Rename type 'TaskStatesRepository'
+1666496006588	Rename package 'com.whatidonext.repository.taskstates'
+1666560155395	Move compilation unit

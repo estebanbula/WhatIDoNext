@@ -1,0 +1,9 @@
+package com.whatidonext.repository.priorities;
+
+import java.util.List;
+
+public interface PrioritiesRepostitory {
+	
+	List<PriotitiesEntity> findAll(); 
+
+}

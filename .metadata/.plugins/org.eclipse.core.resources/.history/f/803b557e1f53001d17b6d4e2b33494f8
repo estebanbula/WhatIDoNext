@@ -1,0 +1,7 @@
+package com.whatidonext.manager.priorities;
+
+public interface PrioritiesManager {
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package com.whatidonext.repository.taskstates;
+
+import com.whatidonext.entity.TaskStateEntity;
+
+public interface TaskStateRepository {
+	
+	void save(TaskStateEntity taskStates);
+
+}

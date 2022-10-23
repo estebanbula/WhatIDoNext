@@ -1,0 +1,20 @@
+package com.whatidonext.repository.priorities;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.whatidonext.entity.PrioritiesEntity;
+
+public class PrioritiesRepositoryImpl implements PrioritiesRepository{
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public List<PrioritiesEntity> findAll() {
+		return null;
+	}
+
+}

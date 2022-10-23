@@ -1,0 +1,25 @@
+package repository.priorities;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import entity.PrioritiesEntity;
+
+public class PrioritiesRepositoryImpl implements PrioritiesRepository{
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public List<PrioritiesEntity> findAll() {
+		return null;
+	}
+
+	@Override
+	public void save(PrioritiesEntity priority) {
+		entityManager.persist(priority);
+	}
+
+}

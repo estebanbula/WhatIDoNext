@@ -1,0 +1,5 @@
+package com.whatidonext.repository.taskstates;
+
+public interface TaskStatesRepository {
+
+}

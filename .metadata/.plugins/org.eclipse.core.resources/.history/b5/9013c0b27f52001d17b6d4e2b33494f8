@@ -1,0 +1,6 @@
+package com.whatidonext.rest;
+
+@RestController
+public class TasksService {
+
+}

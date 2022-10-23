@@ -1,0 +1,11 @@
+package com.whatidonext.manager;
+
+import com.whatidonext.entity.TaskStateEntity;
+
+public interface TaskStateManager {
+	
+	void saveState(TaskStateEntity taskState);
+	
+	void findTaskById(Short taskStateId);
+
+}

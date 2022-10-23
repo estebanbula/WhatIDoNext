@@ -1,0 +1,13 @@
+package repository.priorities;
+
+import java.util.List;
+
+import entity.PrioritiesEntity;
+
+public interface PrioritiesRepository {
+	
+	List<PrioritiesEntity> findAll(); 
+	
+	void save(PrioritiesEntity priority);
+
+}

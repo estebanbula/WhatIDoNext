@@ -1,0 +1,18 @@
+package com.whatidonext.repository.taskstate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.whatidonext.entity.TaskStateEntity;
+
+public class TaskStateRepositoryImpl implements TaskStateRepository {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public void save(TaskStateEntity taskStates) {
+		entityManager.persist(taskStates);		
+	}
+
+}

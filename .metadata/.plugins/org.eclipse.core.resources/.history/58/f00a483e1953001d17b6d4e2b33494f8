@@ -1,0 +1,5 @@
+package com.whatidonext.manager.taskstate;
+
+public class TaskStateManagerImpl {
+
+}
