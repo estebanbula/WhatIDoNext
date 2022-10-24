@@ -1,0 +1,19 @@
+package com.whatidonext.manager.taskstate;
+
+import java.util.List;
+
+import com.whatidonext.entity.TaskStateEntity;
+
+public interface TaskStateManager {
+	
+	List<TaskStateEntity> findAllStates();
+	
+	void findTaskById(Short taskStateId);
+	
+	void saveState(TaskStateEntity taskState);
+	
+	void updateState(TaskStateEntity taskState);
+	
+	void deleteState(TaskStateEntity taskState);
+
+}
