@@ -1,0 +1,45 @@
+package com.whatidonext.manager.priorities;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.whatidonext.entity.PrioritiesEntity;
+import com.whatidonext.repository.priorities.PrioritiesRepository;
+
+@Service
+public class PriotitiesManagerImpl implements PrioritiesManager {
+
+	@Autowired
+	private PrioritiesRepository prioritiesRepository;
+
+	@Override
+	@Transactional
+	public void deletePriority(Short priorityId) {
+		prioritiesRepository.delete(priorityId);
+	}
+
+	@Override
+	public List<PrioritiesEntity> findAllPriorities() {
+		return prioritiesRepository.findAll();
+	}
+
+	@Override
+	public PrioritiesEntity findPriorityById(Short priorityId) {
+		return prioritiesRepository.findById(priorityId);
+	}
+
+	@Override
+	@Transactional
+	public void savePriotity(PrioritiesEntity priority) {
+		prioritiesRepository.save(priority);
+	}
+
+	@Override
+	@Transactional
+	public void updatePriority(PrioritiesEntity priority) {
+		prioritiesRepository.update(priority);
+	}
+
+}

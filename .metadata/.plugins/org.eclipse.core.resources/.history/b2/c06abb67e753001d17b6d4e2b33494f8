@@ -1,0 +1,47 @@
+package com.whatidonext.manager.collaboratorroll;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.whatidonext.entity.CollaboratorRollEntity;
+
+public class CollaboratorRollManagerImpl implements CollaboratorRollManager {
+	
+	private static Logger LOG = LoggerFactory.getLogger(CollaboratorRollManagerImpl.class);
+
+	@Override
+	public void deleteRoll(CollaboratorRollEntity roll) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<CollaboratorRollEntity> findAllRolles() {
+		try {
+			
+		} catch (Exception ex) {
+			LOG.warn(ex.toString());
+		}
+	}
+
+	@Override
+	public CollaboratorRollEntity findRollById(Short rollId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveRoll(CollaboratorRollEntity roll) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateRoll(CollaboratorRollEntity roll) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

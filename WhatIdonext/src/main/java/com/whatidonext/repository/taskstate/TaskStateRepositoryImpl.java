@@ -18,23 +18,23 @@ public class TaskStateRepositoryImpl implements TaskStateRepository {
 	private EntityManager entityManager;
 
 	@Override
-	public void delete(TaskStateEntity taskState) {
-		entityManager.remove(taskState);
+	public void delete(Short stateId) {
+		Query query = entityManager.createNativeQuery("DELETE FROM TASK_STATE_ENTITY WHERE STATE_ID = ?1")
+				.setParameter(1, stateId);
+		query.executeUpdate();
 	}
 
 	@Override
 	public List<TaskStateEntity> findAll() {
-		Query query = entityManager
-				.createNativeQuery("SELECT STATE_ID, STATE_DEDSCRIPTION, ACTIVE, CREATION_DATE FROM TASK_STATES");
+		Query query = entityManager.createNativeQuery(
+				"SELECT STATE_ID, STATE_DESCRIPTION, ACTIVE, CREATION_DATE FROM TASK_STATE_ENTITY",
+				TaskStateEntity.class);
 		return query.getResultList();
 	}
 
 	@Override
 	public TaskStateEntity findById(Short stateId) {
-		Query query = entityManager.createNativeQuery(
-				"SELECT STATE_ID, STATE_DEDSCRIPTION, ACTIVE, CREATION_DATE FROM TASK_STATES WHERE STATE_ID = ?1")
-				.setParameter(1, stateId);
-		return (TaskStateEntity) query.getSingleResult();
+		return entityManager.find(TaskStateEntity.class, stateId);
 	}
 
 	@Override

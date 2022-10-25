@@ -6,7 +6,7 @@ import com.whatidonext.entity.TaskStateEntity;
 
 public interface TaskStateManager {
 	
-	void deleteState(TaskStateEntity taskState);
+	void deleteState(Short stateId);
 	
 	List<TaskStateEntity> findAllStates();
 	

@@ -1,0 +1,46 @@
+package com.whatidonext.manager.collaboratorroll;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.whatidonext.entity.CollaboratorRollEntity;
+import com.whatidonext.repository.collaboratorroll.CollaboratorRollRepository;
+
+@Service
+public class CollaboratorRollManagerImpl implements CollaboratorRollManager {
+
+	@Autowired
+	private CollaboratorRollRepository rollRepository;
+
+	@Override
+	public void deleteRoll(CollaboratorRollEntity roll) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<CollaboratorRollEntity> findAllRolles() throws Exception {
+		return rollRepository.findAll();
+	}
+
+	@Override
+	public CollaboratorRollEntity findRollById(Short rollId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveRoll(CollaboratorRollEntity roll) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateRoll(CollaboratorRollEntity roll) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

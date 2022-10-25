@@ -16,8 +16,9 @@ public class TaskStateManagerImpl implements TaskStateManager{
 	private TaskStateRepository taskStateRepository;
 
 	@Override
-	public void deleteState(TaskStateEntity taskState) {
-		taskStateRepository.delete(taskState);
+	@Transactional
+	public void deleteState(Short stateId) {
+		taskStateRepository.delete(stateId);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class TaskStateManagerImpl implements TaskStateManager{
 	}
 
 	@Override
+	@Transactional
 	public void updateState(TaskStateEntity taskState) {
 		taskStateRepository.update(taskState);
 	}

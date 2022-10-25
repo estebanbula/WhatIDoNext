@@ -22,11 +22,11 @@ public class TaskStatesService {
 	private TaskStateManager taskStateManager;
 
 	@DeleteMapping
-	public void deleteState(@RequestBody TaskStateEntity taskState) {
-		taskStateManager.deleteState(taskState);
+	public void deleteState(@RequestBody Short stateId) {
+		taskStateManager.deleteState(stateId);
 	}
 
-	@GetMapping
+	@GetMapping("/find-all")
 	public List<TaskStateEntity> getAllStates() {
 		return taskStateManager.findAllStates();
 	}

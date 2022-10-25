@@ -1,0 +1,18 @@
+package com.whatidonext.manager.collaborators;
+
+import java.util.List;
+
+import com.whatidonext.entity.CollaboratorsEntity;
+
+public interface CollaboratorsManager {
+	
+	void saveCollaborator(CollaboratorsEntity collaborators);
+	
+	void updateCollaborator(CollaboratorsEntity collaborators);
+	
+	void deleteCollaborator(Short collaboratorId);
+	
+	CollaboratorsEntity findCollaboratorById(Short collaboratorId);
+	
+	List<CollaboratorsEntity> findAllCollaborators();
+}

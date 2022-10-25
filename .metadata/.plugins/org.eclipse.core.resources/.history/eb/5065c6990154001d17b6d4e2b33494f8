@@ -1,0 +1,19 @@
+package com.whatidonext.repository.tasks;
+
+import java.util.List;
+
+import com.whatidonext.entity.TasksEntity;
+
+public interface TasksRepository {
+	
+	void delete(Short tasksId);
+	
+	List<TasksEntity> findAll();
+	
+	TasksEntity findById(TasksEntity tasks);
+	
+	void save(TasksEntity tasks);
+	
+	void update(TasksEntity tasks);
+
+}

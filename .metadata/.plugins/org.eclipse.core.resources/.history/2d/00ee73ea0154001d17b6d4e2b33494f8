@@ -1,0 +1,5 @@
+package com.whatidonext.manager.tasks;
+
+public class TasksManagerImpl {
+
+}

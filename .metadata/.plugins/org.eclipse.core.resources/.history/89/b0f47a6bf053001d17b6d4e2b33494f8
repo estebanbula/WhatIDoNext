@@ -1,0 +1,15 @@
+package com.whatidonext.repository.collaborators;
+
+import com.whatidonext.entity.CollaboratorsEntity;
+
+public interface CollaboratorsRepository {
+	
+	void save(CollaboratorsEntity collaborator);
+	
+	void update(CollaboratorsEntity collaborator);
+	
+	void delete(Short collaboratorId);
+	
+	CollaboratorsEntity findById(Short collaboratorId);
+
+}

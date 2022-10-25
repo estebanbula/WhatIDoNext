@@ -1,0 +1,19 @@
+package com.whatidonext.manager.collaboratorroll;
+
+import java.util.List;
+
+import com.whatidonext.entity.CollaboratorRollEntity;
+
+public interface CollaboratorRollManager {
+	
+	void deleteRoll(CollaboratorRollEntity roll);
+	
+	List<CollaboratorRollEntity> findAll();
+	
+	CollaboratorRollEntity findById(Short rollId);
+	
+	void saveRoll(CollaboratorRollEntity roll);
+	
+	void updateRoll(CollaboratorRollEntity roll);
+
+}

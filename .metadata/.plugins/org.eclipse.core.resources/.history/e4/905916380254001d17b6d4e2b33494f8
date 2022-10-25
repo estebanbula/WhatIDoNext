@@ -1,0 +1,39 @@
+package com.whatidonext.manager.tasks;
+
+import java.util.List;
+
+import com.whatidonext.entity.TasksEntity;
+
+public class TasksManagerImpl implements TasksManager {
+
+	@Override
+	public void deleteTask(Short taskId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<TasksEntity> findAllTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TasksEntity findTaskById(Short taskId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveTask(TasksEntity task) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateTask(TasksEntity task) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

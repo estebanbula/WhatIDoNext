@@ -5,9 +5,15 @@ import java.util.List;
 import com.whatidonext.entity.PrioritiesEntity;
 
 public interface PrioritiesRepository {
-	
-	List<PrioritiesEntity> findAll(); 
-	
+
+	void delete(Short priorityId);
+
+	List<PrioritiesEntity> findAll();
+
+	PrioritiesEntity findById(Short priotityId);
+
 	void save(PrioritiesEntity priority);
+
+	void update(PrioritiesEntity priority);
 
 }

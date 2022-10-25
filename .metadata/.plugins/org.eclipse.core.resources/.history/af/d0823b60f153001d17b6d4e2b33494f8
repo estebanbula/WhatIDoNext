@@ -1,0 +1,48 @@
+package com.whatidonext.repository.collaborators;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
+import com.whatidonext.entity.CollaboratorsEntity;
+
+@Repository
+public class CollaboratorsRepositoryImpl implements CollaboratorsRepository {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public void delete(Short collaboratorId) {
+		Query query = entityManager.createNativeQuery("DELETE FROM COLLABORATORS_ENTITY WHERE COLLABORATOR_ID = ?1")
+				.setParameter(1, collaboratorId);
+	}
+
+	@Override
+	public List<CollaboratorsEntity> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CollaboratorsEntity findById(Short collaboratorId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(CollaboratorsEntity collaborator) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(CollaboratorsEntity collaborator) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

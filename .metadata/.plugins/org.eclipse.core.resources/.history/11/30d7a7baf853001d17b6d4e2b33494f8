@@ -1,0 +1,50 @@
+package com.whatidonext.repository.collaboratorroll;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import org.springframework.stereotype.Repository;
+
+import com.whatidonext.entity.CollaboratorRollEntity;
+
+@Repository
+@SuppressWarnings("unchecked")
+public class CollaboratorRollRepositoryImpl implements CollaboratorRollRepository {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public void delete(Short rollId) {
+		Query query = entityManager.createNativeQuery("DELETE FROM COLLABORATOR_ROLL_ENTITY WHERE ROLL_ID = ?1")
+				.setParameter(1, rollId);
+		query.executeUpdate();
+	}
+
+	@Override
+	public List<CollaboratorRollEntity> findAll() {
+		Query query = entityManager.createNativeQuery(
+				"SELECT ROLL_ID, ROLL_NAME, ACTIVE, CREATION_DATE FROM COLLABORATOR_ROLL_ENTITY",
+				CollaboratorRollEntity.class);
+		return query.getResultList();
+	}
+
+	@Override
+	public CollaboratorRollEntity findById(CollaboratorRollEntity collaboratorRoll) {
+		return entityManager.find(CollaboratorRollEntity.class, collaboratorRoll.getRollId());
+	}
+
+	@Override
+	public void save(CollaboratorRollEntity collaboratorRoll) {
+		entityManager.persist(collaboratorRoll);
+	}
+
+	@Override
+	public void update(CollaboratorRollEntity collaboratorRoll) {
+		entityManager.merge(collaboratorRoll);
+	}
+
+}

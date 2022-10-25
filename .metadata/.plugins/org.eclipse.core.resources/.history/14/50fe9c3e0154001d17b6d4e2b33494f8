@@ -1,0 +1,39 @@
+package com.whatidonext.manager.collaborators;
+
+import java.util.List;
+
+import com.whatidonext.entity.CollaboratorsEntity;
+
+public class CollaboratorsManagerImpl implements CollaboratorsManager {
+
+	@Override
+	public void deleteCollaborator(Short collaboratorId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<CollaboratorsEntity> findAllCollaborators() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CollaboratorsEntity findCollaboratorById(Short collaboratorId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveCollaborator(CollaboratorsEntity collaborators) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateCollaborator(CollaboratorsEntity collaborators) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

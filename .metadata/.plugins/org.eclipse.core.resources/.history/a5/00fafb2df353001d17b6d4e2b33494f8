@@ -1,0 +1,39 @@
+package com.whatidonext.repository.tasks;
+
+import java.util.List;
+
+import com.whatidonext.entity.TasksEntity;
+
+public class TasksRepositoryImpl implements TasksRepository {
+
+	@Override
+	public void delete(Short tasksId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<TasksEntity> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TasksEntity findById(TasksEntity tasks) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(TasksEntity tasks) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(TasksEntity tasks) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

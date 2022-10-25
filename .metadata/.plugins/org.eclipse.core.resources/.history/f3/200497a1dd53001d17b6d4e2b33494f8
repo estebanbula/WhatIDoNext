@@ -1,0 +1,44 @@
+package com.whatidonext.repository.collaboratorroll;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import com.whatidonext.entity.CollaboratorRollEntity;
+
+public class CollaboratorRollRepositoryImpl implements CollaboratorRollRepository {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public void delete(CollaboratorRollEntity collaboratorRoll) {
+		entityManager.remove(collaboratorRoll);
+	}
+
+	@Override
+	public List<CollaboratorRollEntity> findAll() {
+		Query query = entityManager.createNativeQuery("SELECT ROLL_ID, ROLL_NAME, ACTIVE, CREATION_DATE FROM COLLABORATOR_ROLL_ENTITY");
+	}
+
+	@Override
+	public CollaboratorRollEntity findById(Short rollId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(CollaboratorRollEntity collaboratorRoll) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(CollaboratorRollEntity collaboratorRoll) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

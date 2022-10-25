@@ -1,0 +1,47 @@
+package com.whatidonext.repository.tasks;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import com.whatidonext.entity.TasksEntity;
+
+public class TasksRepositoryImpl implements TasksRepository {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public void delete(Short tasksId) {
+		Query query = entityManager.createNativeQuery("DELETE FROM TASKS_ENTITY WHERE TASK_ID = ?1").setParameter(1,
+				tasksId);
+		query.executeUpdate();
+	}
+
+	@Override
+	public List<TasksEntity> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TasksEntity findById(TasksEntity tasks) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(TasksEntity tasks) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(TasksEntity tasks) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

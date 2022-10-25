@@ -1,0 +1,49 @@
+package com.whatidonext.rest;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.whatidonext.entity.CollaboratorRollEntity;
+import com.whatidonext.manager.collaboratorroll.CollaboratorRollManager;
+
+@RestController
+@RequestMapping("/rolles")
+public class CollaboratorRollService {
+	
+	@Autowired
+	private CollaboratorRollManager rollManager;
+	
+	@DeleteMapping
+	public void deleteRoll(@RequestBody Short rollId) throws Exception {
+		rollManager.deleteRoll(rollId);
+	}
+	
+	@GetMapping("/list-all")
+	public List<CollaboratorRollEntity> getAllRolles() throws Exception {
+		return rollManager.findAllRolles();
+	}
+	
+	@GetMapping
+	public CollaboratorRollEntity getCollaborator(Short rollId) throws Exception {
+		return rollManager.findRollById(rollId);
+	}
+	
+	@PostMapping
+	public void newroll(@RequestBody CollaboratorRollEntity roll) throws Exception {
+		rollManager.saveRoll(roll);
+	}
+	
+	@PutMapping
+	public void updateroll(@RequestBody CollaboratorRollEntity roll) throws Exception {
+		rollManager.updateRoll(roll);
+	}
+
+}
