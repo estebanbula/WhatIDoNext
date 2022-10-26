@@ -39,8 +39,14 @@ public class TaskStateManagerImpl implements TaskStateManager{
 
 	@Override
 	@Transactional
-	public void updateState(TaskStateEntity taskState) {
-		taskStateRepository.update(taskState);
+	public void updateState(TaskStateEntity taskState) throws Exception {
+		TaskStateEntity existingState = taskStateRepository.findById(taskState.getStateId());
+		if (existingState == null) {
+			throw new Exception("State not found");
+		}
+		existingState.setStateDescription(taskState.getStateDescription());
+		existingState.setActive(taskState.getActive());
+		taskStateRepository.update(existingState);
 	}
 
 }

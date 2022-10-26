@@ -14,6 +14,6 @@ public interface TaskStateManager {
 	
 	void saveState(TaskStateEntity taskState);
 	
-	void updateState(TaskStateEntity taskState);
+	void updateState(TaskStateEntity taskState) throws Exception;
 
 }

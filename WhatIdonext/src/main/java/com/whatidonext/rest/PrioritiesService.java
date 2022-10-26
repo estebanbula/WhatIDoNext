@@ -41,7 +41,7 @@ public class PrioritiesService {
 		prioritiesManager.updatePriority(priority);
 	}
 	
-	@DeleteMapping
+	@DeleteMapping("/delete")
 	public void deletePriority(@RequestBody Short priorityId) {
 		prioritiesManager.deletePriority(priorityId);
 	}

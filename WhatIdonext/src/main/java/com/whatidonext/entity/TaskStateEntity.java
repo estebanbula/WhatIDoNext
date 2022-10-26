@@ -35,7 +35,7 @@ public class TaskStateEntity {
 		return stateDescription;
 	}
 
-	public Short getTaskId() {
+	public Short getStateId() {
 		return stateId;
 	}
 
@@ -51,7 +51,7 @@ public class TaskStateEntity {
 		this.stateDescription = stateDescription;
 	}
 
-	public void setTaskId(Short stateId) {
+	public void setStateId(Short stateId) {
 		this.stateId = stateId;
 	}
 
