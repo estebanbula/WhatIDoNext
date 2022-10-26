@@ -3,6 +3,7 @@ package com.whatidonext.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import com.whatidonext.entity.TaskStateEntity;
 import com.whatidonext.manager.taskstate.TaskStateManager;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/task-states")
 public class TaskStatesService {
 
@@ -36,7 +38,7 @@ public class TaskStatesService {
 		return taskStateManager.findStateById(stateId);
 	}
 
-	@PostMapping
+	@PostMapping("/save")
 	public void newTaskState(@RequestBody TaskStateEntity taskState) {
 		taskStateManager.saveState(taskState);
 	}
